@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice 2 HTML/CSS/JS</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Practice 2 HTML/CSS/JS</h1>
+
+    <!-- слайдер зображень з відкриттям більшого зображення та прокруткою з часом -->
+
+    <div id="sliders">
+      <p>
+        Авто прокрутка слайдів кожні 6 секунд, при натискані оновлення таймера.
+        Модальне вікно збільшою картинкою, відкривається після натискання на
+        зображення
+      </p>
+      <div class="slidersContent">
+        <button class="backBtn" type="button" onclick="back('.carouselImg1')">
+          Назад
+        </button>
+        <img
+          class="imagesSlider carouselImg1"
+          src="..."
+          alt="img"
+          onclick="openModalSlider('#modalSlider1')"
+        />
+        <button class="nextBtn" type="button" onclick="next('.carouselImg1')">
+          Вперед
+        </button>
+      </div>
+
+      <div class="slidersContent">
+        <button class="backBtn" type="button" onclick="back('.carouselImg2')">
+          Назад
+        </button>
+        <img
+          class="imagesSlider carouselImg2"
+          src="..."
+          alt="img"
+          onclick="openModalSlider('#modalSlider2')"
+        />
+        <button class="nextBtn" type="button" onclick="next('.carouselImg2')">
+          Вперед
+        </button>
+      </div>
+
+      <!-- модальне вiкно -->
+
+      <div id="modalSlider1" onclick="closeModalSlider()">
+        <div class="modalSliderContent" onclick="event.stopPropagation()">
+          <button
+            type="button"
+            class="modalBackBtn"
+            onclick="back('.sliderImages1')"
+          >
+            -
+          </button>
+          <img src="..." alt="big img" class="bigImagesSlider sliderImages1" />
+          <button
+            type="button"
+            class="modalNextBtn"
+            onclick="next('.sliderImages1')"
+          >
+            +
+          </button>
+        </div>
+      </div>
+
+      <div id="modalSlider2" onclick="closeModalSlider()">
+        <div class="modalSliderContent" onclick="event.stopPropagation()">
+          <span>
+            <button
+              type="button"
+              class="modalBackBtn"
+              onclick="back('.sliderImages2')"
+            >
+              <span>-</span>
+            </button>
+          </span>
+          <span class="imgContent">
+            <img
+              src="..."
+              alt="big img"
+              class="bigImagesSlider sliderImages2"
+            />
+          </span>
+          <span>
+            <button
+              type="button"
+              class="modalNextBtn"
+              onclick="next('.sliderImages2')"
+            >
+              <span>+</span>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!------------ кінець слайдера ------------>
+
+    <script src="/index/sliderImages.js"></script>
+  </body>
+</html>
