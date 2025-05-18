@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practice 2 HTML/CSS/JS</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="/style/style.css" />
   </head>
   <body>
     <h1>Practice 2 HTML/CSS/JS</h1>
@@ -102,6 +102,34 @@
 
     <!------------ кінець слайдера ------------>
 
+    <!-- фільтрація за категоріями -->
+
+    <div id="filtr">
+      <div class="filtrToggleList">
+        <span>
+          <input type="checkbox" value="Clothing" class="filtrToggle" />
+          Одяг
+        </span>
+        <span>
+          <input type="checkbox" value="Accessories" class="filtrToggle" />
+          Аксесуари
+        </span>
+        <span>
+          <input type="checkbox" value="Homemade" class="filtrToggle" />
+          Домашнє
+        </span>
+        <span>
+          <input type="checkbox" value="Electronics" class="filtrToggle" />
+          Електроніка
+        </span>
+      </div>
+
+      <ul class="list"></ul>
+    </div>
+
+    <!---------- кінець фільтрації ----------->
+
     <script src="/index/sliderImages.js"></script>
+    <script src="/index/filterCategory.js"></script>
   </body>
 </html>

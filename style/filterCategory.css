@@ -1,0 +1,62 @@
+#filtr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.filtrToggleList {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 25px;
+}
+
+.filtrToggleList span {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.filtrToggle {
+  width: 30px;
+  height: 30px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  width: 500px;
+}
+
+.listContent {
+  list-style: none;
+  width: 160px;
+  height: 280px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.cardConteiner img {
+  width: 160px;
+  height: 160px;
+}
+
+.cardConteiner h3 {
+  margin-bottom: 10px;
+}
+
+.cardConteiner p {
+  color: #4b4b4b;
+  font-size: small;
+}
+
+.notFoundText {
+  margin: 0 auto;
+  font-size: large;
+  font-weight: 600;
+  color: #ca3232;
+}
