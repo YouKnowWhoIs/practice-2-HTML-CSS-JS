@@ -105,6 +105,7 @@
     <!-- фільтрація за категоріями -->
 
     <div id="filtr">
+      <p>Фільтрація елементів по категорія</p>
       <div class="filtrToggleList">
         <span>
           <input type="checkbox" value="Clothing" class="filtrToggle" />
@@ -129,7 +130,21 @@
 
     <!---------- кінець фільтрації ----------->
 
+    <!-- пошук контактів -->
+
+    <div id="search">
+      <p>Пошук контактiв за ім'я та номером телефону</p>
+      <div class="inputConteiner">
+        <input type="text" placeholder="Пошук і'мя..." id="searchName" />
+        <input type="text" placeholder="Пошук номера..." id="searchTel" />
+      </div>
+      <ul class="contactList"></ul>
+    </div>
+
+    <!------------ кінець пошуку ------------->
+
     <script src="/index/sliderImages.js"></script>
     <script src="/index/filterCategory.js"></script>
+    <script src="/index/searchContact.js"></script>
   </body>
 </html>
