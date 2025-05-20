@@ -7,144 +7,158 @@
     <link rel="stylesheet" href="/style/style.css" />
   </head>
   <body>
-    <h1>Practice 2 HTML/CSS/JS</h1>
+    <header id="header">
+      <!-- Sticky header -->
 
-    <!-- слайдер зображень з відкриттям більшого зображення та прокруткою з часом -->
-
-    <div id="sliders">
-      <p>
-        Авто прокрутка слайдів кожні 6 секунд, при натискані оновлення таймера.
-        Модальне вікно збільшою картинкою, відкривається після натискання на
-        зображення
-      </p>
-      <div class="slidersContent">
-        <button class="backBtn" type="button" onclick="back('.carouselImg1')">
-          Назад
-        </button>
-        <img
-          class="imagesSlider carouselImg1"
-          src="..."
-          alt="img"
-          onclick="openModalSlider('#modalSlider1')"
-        />
-        <button class="nextBtn" type="button" onclick="next('.carouselImg1')">
-          Вперед
-        </button>
+      <div id="headerStick">
+        <h1>Practice 2 HTML/CSS/JS</h1>
       </div>
 
-      <div class="slidersContent">
-        <button class="backBtn" type="button" onclick="back('.carouselImg2')">
-          Назад
-        </button>
-        <img
-          class="imagesSlider carouselImg2"
-          src="..."
-          alt="img"
-          onclick="openModalSlider('#modalSlider2')"
-        />
-        <button class="nextBtn" type="button" onclick="next('.carouselImg2')">
-          Вперед
-        </button>
-      </div>
+      <!------------- кінець Sticky header ------------>
+    </header>
+    <main>
+      <!-- слайдер зображень з відкриттям більшого зображення та прокруткою з часом -->
 
-      <!-- модальне вiкно -->
-
-      <div id="modalSlider1" onclick="closeModalSlider()">
-        <div class="modalSliderContent" onclick="event.stopPropagation()">
-          <button
-            type="button"
-            class="modalBackBtn"
-            onclick="back('.sliderImages1')"
-          >
-            -
+      <div id="sliders">
+        <p>
+          Авто прокрутка слайдів кожні 6 секунд, при натискані оновлення
+          таймера. Модальне вікно збільшою картинкою, відкривається після
+          натискання на зображення
+        </p>
+        <div class="slidersContent">
+          <button class="backBtn" type="button" onclick="back('.carouselImg1')">
+            Назад
           </button>
-          <img src="..." alt="big img" class="bigImagesSlider sliderImages1" />
-          <button
-            type="button"
-            class="modalNextBtn"
-            onclick="next('.sliderImages1')"
-          >
-            +
+          <img
+            class="imagesSlider carouselImg1"
+            src="..."
+            alt="img"
+            onclick="openModalSlider('#modalSlider1')"
+          />
+          <button class="nextBtn" type="button" onclick="next('.carouselImg1')">
+            Вперед
           </button>
         </div>
-      </div>
 
-      <div id="modalSlider2" onclick="closeModalSlider()">
-        <div class="modalSliderContent" onclick="event.stopPropagation()">
-          <span>
+        <div class="slidersContent">
+          <button class="backBtn" type="button" onclick="back('.carouselImg2')">
+            Назад
+          </button>
+          <img
+            class="imagesSlider carouselImg2"
+            src="..."
+            alt="img"
+            onclick="openModalSlider('#modalSlider2')"
+          />
+          <button class="nextBtn" type="button" onclick="next('.carouselImg2')">
+            Вперед
+          </button>
+        </div>
+
+        <!-- модальне вiкно -->
+
+        <div id="modalSlider1" onclick="closeModalSlider()">
+          <div class="modalSliderContent" onclick="event.stopPropagation()">
             <button
               type="button"
               class="modalBackBtn"
-              onclick="back('.sliderImages2')"
+              onclick="back('.sliderImages1')"
             >
-              <span>-</span>
+              -
             </button>
-          </span>
-          <span class="imgContent">
             <img
               src="..."
               alt="big img"
-              class="bigImagesSlider sliderImages2"
+              class="bigImagesSlider sliderImages1"
             />
-          </span>
-          <span>
             <button
               type="button"
               class="modalNextBtn"
-              onclick="next('.sliderImages2')"
+              onclick="next('.sliderImages1')"
             >
-              <span>+</span>
+              +
             </button>
-          </span>
+          </div>
+        </div>
+
+        <div id="modalSlider2" onclick="closeModalSlider()">
+          <div class="modalSliderContent" onclick="event.stopPropagation()">
+            <span>
+              <button
+                type="button"
+                class="modalBackBtn"
+                onclick="back('.sliderImages2')"
+              >
+                <span>-</span>
+              </button>
+            </span>
+            <span class="imgContent">
+              <img
+                src="..."
+                alt="big img"
+                class="bigImagesSlider sliderImages2"
+              />
+            </span>
+            <span>
+              <button
+                type="button"
+                class="modalNextBtn"
+                onclick="next('.sliderImages2')"
+              >
+                <span>+</span>
+              </button>
+            </span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!------------ кінець слайдера ------------>
+      <!------------ кінець слайдера ------------>
 
-    <!-- фільтрація за категоріями -->
+      <!-- фільтрація за категоріями -->
 
-    <div id="filtr">
-      <p>Фільтрація елементів по категорія</p>
-      <div class="filtrToggleList">
-        <span>
-          <input type="checkbox" value="Clothing" class="filtrToggle" />
-          Одяг
-        </span>
-        <span>
-          <input type="checkbox" value="Accessories" class="filtrToggle" />
-          Аксесуари
-        </span>
-        <span>
-          <input type="checkbox" value="Homemade" class="filtrToggle" />
-          Домашнє
-        </span>
-        <span>
-          <input type="checkbox" value="Electronics" class="filtrToggle" />
-          Електроніка
-        </span>
+      <div id="filtr">
+        <p>Фільтрація елементів по категорія</p>
+        <div class="filtrToggleList">
+          <span>
+            <input type="checkbox" value="Clothing" class="filtrToggle" />
+            Одяг
+          </span>
+          <span>
+            <input type="checkbox" value="Accessories" class="filtrToggle" />
+            Аксесуари
+          </span>
+          <span>
+            <input type="checkbox" value="Homemade" class="filtrToggle" />
+            Домашнє
+          </span>
+          <span>
+            <input type="checkbox" value="Electronics" class="filtrToggle" />
+            Електроніка
+          </span>
+        </div>
+
+        <ul class="list"></ul>
       </div>
 
-      <ul class="list"></ul>
-    </div>
+      <!---------- кінець фільтрації ----------->
 
-    <!---------- кінець фільтрації ----------->
+      <!-- пошук контактів -->
 
-    <!-- пошук контактів -->
-
-    <div id="search">
-      <p>Пошук контактiв за ім'я та номером телефону</p>
-      <div class="inputConteiner">
-        <input type="text" placeholder="Пошук і'мя..." id="searchName" />
-        <input type="text" placeholder="Пошук номера..." id="searchTel" />
+      <div id="search">
+        <p>Пошук контактiв за ім'я та номером телефону</p>
+        <div class="inputConteiner">
+          <input type="text" placeholder="Пошук і'мя..." id="searchName" />
+          <input type="text" placeholder="Пошук номера..." id="searchTel" />
+        </div>
+        <ul class="contactList"></ul>
       </div>
-      <ul class="contactList"></ul>
-    </div>
 
-    <!------------ кінець пошуку ------------->
+      <!------------ кінець пошуку ------------->
+    </main>
 
     <script src="/index/sliderImages.js"></script>
     <script src="/index/filterCategory.js"></script>
     <script src="/index/searchContact.js"></script>
+    <script src="/index/stickyHeader.js"></script>
   </body>
 </html>

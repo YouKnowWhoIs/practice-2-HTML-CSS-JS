@@ -1,0 +1,26 @@
+#header {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  padding: 16px 0 0 0;
+  margin-bottom: 50px;
+}
+
+#headerStick h1 {
+  margin: 0;
+}
+
+#headerStick {
+  position: fixed;
+  z-index: 3;
+  transition: all 0.5s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.active {
+  top: 0;
+  background-color: #fff;
+  font-size: small;
+  padding: 10px 0 15px 0;
+}
