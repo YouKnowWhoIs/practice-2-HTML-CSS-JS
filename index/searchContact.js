@@ -1,3 +1,5 @@
+import errorText from "./errorText.js";
+
 const contacts = [
   { id: 11, nickname: "Fox", name: "Олег", phone: "+380931112233" },
   { id: 12, nickname: "Luna", name: "Аліна", phone: "+380671234567" },
@@ -27,6 +29,12 @@ function filterContacts() {
 
     return matchName && matchTel;
   });
+
+  if (results.length === 0) {
+    errorText(".errorTextSearch", "Нічого не знайденно");
+  } else {
+    errorText(".errorTextSearch", "");
+  }
 
   contactList();
 }

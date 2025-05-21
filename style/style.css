@@ -2,6 +2,7 @@
 @import "./filterCategory.css";
 @import "./searchContack.css";
 @import "./stickyHeader.css";
+@import "./calculate.css";
 
 body {
   font-family: Arial, sans-serif;

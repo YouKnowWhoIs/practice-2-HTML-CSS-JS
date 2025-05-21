@@ -55,9 +55,9 @@
   font-size: small;
 }
 
-.notFoundText {
-  margin: 0 auto;
-  font-size: large;
-  font-weight: 600;
-  color: #ca3232;
+.errorTextFiltr {
+  color: red;
+  font-size: larger;
+  font-weight: 700;
+  margin: 10px 0;
 }

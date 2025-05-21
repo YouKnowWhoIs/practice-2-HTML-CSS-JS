@@ -137,6 +137,8 @@
           </span>
         </div>
 
+        <p class="errorTextFiltr"></p>
+
         <ul class="list"></ul>
       </div>
 
@@ -150,15 +152,44 @@
           <input type="text" placeholder="Пошук і'мя..." id="searchName" />
           <input type="text" placeholder="Пошук номера..." id="searchTel" />
         </div>
+        <p class="errorTextSearch"></p>
         <ul class="contactList"></ul>
       </div>
 
       <!------------ кінець пошуку ------------->
+
+      <!-- калькулятор чайевих -->
+
+      <div id="calculate">
+        <p>
+          Розрахування введеної суму на суму без чайових та сума самих сайових
+        </p>
+        <p class="errorTextCalculate"></p>
+        <p class="calculateText">
+          <span class="allPrice"></span>
+          <span class="withoutTip"></span>
+          <span class="withTip"></span>
+        </p>
+        <div class="calculateForm">
+          <input
+            type="text"
+            placeholder="Впиши суму..."
+            class="tipInput"
+            inputmode="decimal"
+            pattern="[0-9]*"
+          />
+          <button type="button" class="countBtn">Розрахувати</button>
+        </div>
+        <div class="calculateNumber"></div>
+      </div>
+
+      <!----------- кінець калькулятора ------------>
     </main>
 
-    <script src="/index/sliderImages.js"></script>
-    <script src="/index/filterCategory.js"></script>
-    <script src="/index/searchContact.js"></script>
-    <script src="/index/stickyHeader.js"></script>
+    <script type="module" src="/index/sliderImages.js"></script>
+    <script type="module" src="/index/filterCategory.js"></script>
+    <script type="module" src="/index/searchContact.js"></script>
+    <script type="module" src="/index/stickyHeader.js"></script>
+    <script type="module" src="/index/calculate.js"></script>
   </body>
 </html>

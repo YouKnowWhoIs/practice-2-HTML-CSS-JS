@@ -1,3 +1,5 @@
+import errorText from "./errorText.js";
+
 const article = [
   {
     id: "1",
@@ -73,12 +75,9 @@ toggle.forEach((tog) => {
 
     if (activeFilters.length === 0) {
       filteredArticles = article;
-    } else if (activeFilters.length === 3) {
+    } else if (activeFilters.length >= 3) {
       list.innerHTML = "";
-      const p = document.createElement("p");
-      p.textContent = "Товарів не знайдено";
-      p.classList.add("notFoundText");
-      list.appendChild(p);
+      errorText(".errorTextFiltr", "Товарів не знайдено");
       return;
     } else {
       filteredArticles = article.filter((art) =>

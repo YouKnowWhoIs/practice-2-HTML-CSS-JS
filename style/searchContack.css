@@ -20,6 +20,13 @@
   border-radius: 10px;
 }
 
+.errorTextSearch {
+  color: red;
+  font-size: larger;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
 .contactList {
   display: flex;
   flex-wrap: wrap;
