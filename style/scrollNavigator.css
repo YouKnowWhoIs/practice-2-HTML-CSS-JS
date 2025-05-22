@@ -1,0 +1,23 @@
+.scrollNavigationConteiner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 3;
+}
+
+.scrollUp,
+.scrollDown {
+  border: 3px solid #232323;
+  border-radius: 100px;
+  background-color: antiquewhite;
+  cursor: pointer;
+}
+
+.icon {
+  padding: 20px;
+  width: 30px;
+  height: 30px;
+}

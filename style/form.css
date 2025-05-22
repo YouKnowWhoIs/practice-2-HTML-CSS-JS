@@ -1,0 +1,38 @@
+#myForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.inputName,
+.inputEmail,
+.inputPass {
+  width: 200px;
+  padding: 10px 0 10px 10px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
+
+.formBtn {
+  background-color: rgb(204, 218, 244);
+  padding: 10px;
+  font-size: large;
+  font-weight: 600;
+  border: 3px solid #232323;
+  border-radius: 6px;
+}
+
+.errorName,
+.errorEmail,
+.errorPass {
+  display: none;
+  color: red;
+  font-size: large;
+}
+
+.succesText {
+  display: none;
+  font-size: large;
+}

@@ -16,7 +16,7 @@
 
       <!------------- кінець Sticky header ------------>
     </header>
-    <main>
+    <main id="main">
       <!-- слайдер зображень з відкриттям більшого зображення та прокруткою з часом -->
 
       <div id="sliders">
@@ -184,12 +184,32 @@
       </div>
 
       <!----------- кінець калькулятора ------------>
+
+      <!-- валідатор форми -->
+
+      <form id="myForm">
+        <p>переверяє форму на валідність</p>
+        <input class="inputName" type="text" placeholder="Нікнейм" />
+        <p class="errorName"></p>
+        <input class="inputEmail" type="email" placeholder="Пошта" />
+        <p class="errorEmail"></p>
+        <input class="inputPass" type="password" placeholder="Пароль" />
+        <p class="errorPass"></p>
+        <p class="successText">Усе вірно!</p>
+        <button type="submit" class="formBtn">Продовжити</button>
+      </form>
+
+      <!------------- кінець форми -------------->
     </main>
+
+    <!-- <div class="scrollNavigationConteiner"></div> -->
 
     <script type="module" src="/index/sliderImages.js"></script>
     <script type="module" src="/index/filterCategory.js"></script>
     <script type="module" src="/index/searchContact.js"></script>
     <script type="module" src="/index/stickyHeader.js"></script>
     <script type="module" src="/index/calculate.js"></script>
+    <script type="module" src="/index/form.js"></script>
+    <script type="module" src="/index/scrollNavigator.js"></script>
   </body>
 </html>

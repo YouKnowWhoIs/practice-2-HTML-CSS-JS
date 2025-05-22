@@ -3,6 +3,8 @@
 @import "./searchContack.css";
 @import "./stickyHeader.css";
 @import "./calculate.css";
+@import "./form.css";
+@import "./scrollNavigator.css";
 
 body {
   font-family: Arial, sans-serif;
