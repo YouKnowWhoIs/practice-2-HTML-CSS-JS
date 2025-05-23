@@ -1,0 +1,21 @@
+#keyDown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.boxZone {
+  width: 1010px;
+  height: 810px;
+  border: 5px solid #232323;
+  position: relative;
+}
+
+#box {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border: none;
+  position: absolute;
+}

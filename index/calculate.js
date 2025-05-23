@@ -2,6 +2,7 @@ import errorText from "./errorText.js";
 
 function calculateTip() {
   const calculate = document.querySelector(".calculateNumber");
+  const priceInput = document.querySelector(".priceInput");
   const tipInput = document.querySelector(".tipInput");
   const countBtn = document.querySelector(".countBtn");
   const withoutTip = document.querySelector(".withoutTip");
@@ -10,29 +11,39 @@ function calculateTip() {
 
   const number = ["1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "0", "C"];
 
-  tipInput.addEventListener("input", () => {
-    let value = tipInput.value;
+  let currentInput = null;
 
-    value = value.replace(/[^0-9.]/g, "");
+  priceInput.addEventListener("focus", () => {
+    currentInput = priceInput;
+  });
 
-    tipInput.value = value;
+  tipInput.addEventListener("focus", () => {
+    currentInput = tipInput;
   });
 
   countBtn.addEventListener("click", () => {
-    if (isNaN(parseFloat(tipInput.value)) || tipInput.value.trim() === "") {
+    if (isNaN(parseFloat(priceInput.value)) || priceInput.value.trim() === "") {
+      priceInput.value = "";
+      errorText(".errorTextCalculate", "Некоректне значення!");
+      return;
+    } else if (
+      isNaN(parseFloat(tipInput.value)) ||
+      tipInput.value.trim() === ""
+    ) {
       tipInput.value = "";
       errorText(".errorTextCalculate", "Некоректне значення!");
       return;
     }
 
-    let tipPrice = tipInput.value * 0.15;
-    let price = tipInput.value - tipPrice;
+    let tipPrice = priceInput.value * (tipInput.value / 100);
+    let price = priceInput.value - tipPrice;
 
-    allPrice.textContent = `Результат: ${tipInput.value},`;
+    allPrice.textContent = `Сума: ${priceInput.value},`;
     withoutTip.textContent = `Без чайових: ${price.toFixed(2)},`;
     withTip.textContent = `Самі чайові: ${tipPrice.toFixed(2)}`;
 
     errorText(".errorTextCalculate", "");
+    priceInput.value = "";
     tipInput.value = "";
   });
 
@@ -49,6 +60,7 @@ function calculateTip() {
   numBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.textContent === "C") {
+        priceInput.value = "";
         tipInput.value = "";
         errorText(".errorTextCalculate", "");
         allPrice.textContent = "";
@@ -57,8 +69,11 @@ function calculateTip() {
         return;
       }
 
-      if (btn.textContent === "." && tipInput.value.includes(".")) return;
-      tipInput.value = tipInput.value + btn.textContent;
+      if (!currentInput) return;
+
+      if (btn.textContent === "." && currentInput.value.includes(".")) return;
+
+      currentInput.value += btn.textContent;
     });
   });
 }
