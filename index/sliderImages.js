@@ -119,3 +119,12 @@ function next(selector) {
     startAutoChange2();
   }
 }
+
+window.startAutoChange1 = startAutoChange1;
+window.startAutoChange2 = startAutoChange2;
+window.updateImages = updateImages;
+window.updateModalImages = updateModalImages;
+window.openModalSlider = openModalSlider;
+window.closeModalSlider = closeModalSlider;
+window.back = back;
+window.next = next;
