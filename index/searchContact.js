@@ -62,3 +62,6 @@ function contactList() {
 results = contacts;
 
 contactList();
+
+window.filterContacts = filterContacts;
+window.contactList = contactList;

@@ -62,3 +62,5 @@ function submitForm() {
     inputPass.value = "";
   }
 }
+
+window.submitForm = submitForm;
